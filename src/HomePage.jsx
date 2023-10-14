@@ -4,7 +4,7 @@ const HomePage = () => {
   //Almecenamos los datos en un estado con useState
   const [products, setProducts] = useState([]);
 
-  //Usaremos useEffect para hacer el fetch de la data
+  //Fetch de la data
   useEffect(() => {
     const fetchData = async () => {
       try {
