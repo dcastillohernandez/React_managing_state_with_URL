@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  //Almecenamos los datos en un estado con useState
+  //Almecenamos datos
   const [products, setProducts] = useState([]);
 
   //Fetch de la data
@@ -25,10 +26,14 @@ const HomePage = () => {
       <h1>HomePage of my Dummy Product Page</h1>
       <div className="products__list">
         {products.map((product) => (
-          <div key={product.id} className="product__item">
+          <Link
+            key={product.id}
+            to={`/product?id=${product.id}`}
+            className="product__item"
+          >
             <img loading="lazy" src={product.imageUrl} alt="" />
             <h2>{product.itemName}</h2>
-          </div>
+          </Link>
         ))}
       </div>
     </main>
