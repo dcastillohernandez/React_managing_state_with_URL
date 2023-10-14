@@ -22,7 +22,7 @@ const HomePage = () => {
 
   return (
     <main className="homepage">
-      <h1>HomePage of my Dummy Product Page</h1>
+      <h1>HomePage of m Dummy Product Page</h1>
       <div className="products__list">
         {products.map((product) => (
           <div key={product.id} className="product__item">
